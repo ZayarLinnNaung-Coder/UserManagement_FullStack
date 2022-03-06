@@ -1,0 +1,23 @@
+jwt:
+  secret: '[a-zA-Z0-9._]^+$Guidelines89797987forAlphabeticalArraNumeralsandOtherSymbo$'
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+#    url: jdbc:mysql://localhost:3306/usermanagement
+    url: postgres://cumohyddaxetor:b69e8102ac6b3e58112eb2ab147c02829f4f7d7b3964a5737b04ed54f35aac19@ec2-3-209-61-239.compute-1.amazonaws.com:5432/d4u2h4iu9mj8el
+    username: cumohyddaxetor
+    password: b69e8102ac6b3e58112eb2ab147c02829f4f7d7b3964a5737b04ed54f35aac19
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
