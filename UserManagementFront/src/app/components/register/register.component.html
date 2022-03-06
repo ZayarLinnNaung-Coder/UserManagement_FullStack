@@ -1,0 +1,46 @@
+<div class="container h-100">
+  <div class="row h-100">
+    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+      <div class="d-table-cell align-middle">
+
+        <div class="text-center mt-4">
+          <h3>Get started</h3>
+          <hr>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="m-sm-4">
+              <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+                <div class="form-group mb-2">
+                  <label>First Name</label>
+                  <input formControlName="firstName" class="form-control" type="text" name="firstName" placeholder="John">
+                </div>
+                <div class="form-group mb-2">
+                  <label>Last Name</label>
+                  <input formControlName="lastName" class="form-control" type="text" name="lastName" placeholder="Wasli">
+                </div>
+                <div class="form-group mb-2">
+                  <label>Username</label>
+                  <input formControlName="username" class="form-control" type="text" name="username" placeholder="JhonWasli">
+                </div>
+                <div class="form-group mb-2">
+                  <label>Email</label>
+                  <input formControlName="email" class="form-control" type="email" name="email" placeholder="example@gmail.com">
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary">
+                    <span *ngIf="isLoading"><i class="fa-solid fa-spinner fa-spin-pulse"></i> Loading</span>
+                    <span *ngIf="!isLoading">Sign up</span>
+                  </button>
+                  <!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

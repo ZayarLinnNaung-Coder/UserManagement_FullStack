@@ -1,0 +1,23 @@
+.update-icon{
+  border: 1px solid gray;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  &:hover{
+    background-color: #5369f8;
+    .fa-solid{
+      color: #fafafa;
+    }
+  }
+}
+.delete-icon{
+  border: 1px solid gray;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+   &:hover{
+     background-color: red;
+     .fa-solid{
+       color: #fafafa;
+     }
+   }
+ }
